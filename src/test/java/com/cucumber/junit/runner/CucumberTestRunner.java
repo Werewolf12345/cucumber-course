@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = "pretty",
-        monochrome = false,
+        plugin = {"pretty", "html:target/Destination"},
         tags = "@smoke",
         glue = "com.cucumber.junit",
         features = "classpath:com/cucumber/junit/features"
